@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Stylesheet 👍 -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div id="top-bg" role="region" aria-label="background color"></div>
+    <main>
+      <div class="top-section">
+        <div class="top-section-head">
+          <div class="head-left">
+            <h1>Social Media Dashboard</h1>
+            <span class="text-gray">Total Followers: 23,004</span>
+          </div>
+          <div class="head-right">
+            <div id="toggle-container" class="toggle-switch">
+              <input type="checkbox" id="toggle" class="toggle-input" />
+              <label for="toggle" class="toggle-label"></label>
+              <div class="toggle-text">Dark Mode</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-section-body">
+          <div class="body-item facebook">
+            <div class="username text-gray">
+              <img
+                class="icon-img"
+                src="./images/icon-facebook.svg"
+                alt="facebook icon"
+              />
+              @nathanf
+            </div>
+            <div class="follow-number">1987</div>
+            <div class="follow text-gray">Followers</div>
+            <div class="visit-count text-green">
+              <img src="./images/icon-up.svg" alt="icon triangle up" />
+              12 Today
+            </div>
+          </div>
+
+          <div class="body-item twitter">
+            <div class="username text-gray">
+              <img
+                class="icon-img"
+                src="./images/icon-twitter.svg"
+                alt="twitter icon"
+              />
+              @nathanf
+            </div>
+            <div class="follow-number">1044</div>
+            <div class="follow text-gray">Followers</div>
+            <div class="visit-count text-green">
+              <img src="./images/icon-up.svg" alt="icon triangle up" />
+              99 Today
+            </div>
+          </div>
+
+          <div class="body-item instagram">
+            <div class="username text-gray">
+              <img
+                src="./images/icon-instagram.svg"
+                alt="instagram icon"
+                class="icon-img"
+              />
+              @realnathanf
+            </div>
+            <div class="follow-number">11k</div>
+            <div class="follow text-gray">Followers</div>
+            <div class="visit-count text-green">
+              <img src="./images/icon-up.svg" alt="icon triangle up" />
+              1099 Today
+            </div>
+          </div>
+
+          <div class="body-item youtube">
+            <div class="username text-gray">
+              <img
+                src="./images/icon-youtube.svg"
+                alt="youtube icon"
+                class="icon-img"
+              />
+              Nathan F.
+            </div>
+            <div class="follow-number">8239</div>
+            <div class="follow text-gray">Subscribers</div>
+            <div class="visit-count text-red">
+              <img src="./images/icon-down.svg" alt="icon triangle down" />
+              144 Today
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <div class="bottom-section-head text-gray">Overview - Today</div>
+
+        <div class="bottom-section-body">
+          <div class="body-item">
+            <div class="body-item-top">
+              <div class="text-gray">Page Views</div>
+              <div>
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt="facebook icon"
+                  class="icon-img"
+                />
+              </div>
+            </div>
+            <div class="body-item-bottom">
+              <div class="number">87</div>
+              <div class="percentage text-green">
+                <img src="./images/icon-up.svg" alt="icon triangle up" />
+                3%
+              </div>
+            </div>
+          </div>
+
+          <div class="body-item">
+            <div class="body-item-top">
+              <div class="text-gray">Likes</div>
+              <div>
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt="facebook icon"
+                  class="icon-img"
+                />
+              </div>
+            </div>
+            <div class="body-item-bottom">
+              <div class="number">52</div>
+              <div class="percentage text-red">
+                <img src="./images/icon-down.svg" alt="icon triangle down" />
+                2%
+              </div>
+            </div>
+          </div>
+
+          <div class="body-item">
+            <div class="body-item-top">
+              <div class="text-gray">Likes</div>
+              <div>
+                <img
+                  src="./images/icon-instagram.svg"
+                  alt="instagram icon"
+                  class="icon-img"
+                />
+              </div>
+            </div>
+            <div class="body-item-bottom">
+              <div class="number">5462</div>
+              <div class="percentage text-green">
+                <img src="./images/icon-up.svg" alt="icon triangle up" />
+                2257%
+              </div>
+            </div>
+          </div>
+
+          <div class="body-item">
+            <div class="body-item-top">
+              <div class="text-gray">Profile Views</div>
+              <div>
+                <img
+                  src="./images/icon-instagram.svg"
+                  alt="instagram icon"
+                  class="icon-img"
+                />
+              </div>
+            </div>
+            <div class="body-item-bottom">
+              <div class="number">52k</div>
+              <div class="percentage text-green">
+                <img src="./images/icon-up.svg" alt="icon triangle up" />
+                1375%
+              </div>
+            </div>
+          </div>
+
+          <div class="body-item">
+            <div class="body-item-top">
+              <div class="text-gray">Retweets</div>
+              <div>
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt="twitter icon"
+                  class="icon-img"
+                />
+              </div>
+            </div>
+            <div class="body-item-bottom">
+              <div class="number">117</div>
+              <div class="percentage text-green">
+                <img src="./images/icon-up.svg" alt="icon triangle up" />
+                303%
+              </div>
+            </div>
+          </div>
+
+          <div class="body-item">
+            <div class="body-item-top">
+              <div class="text-gray">Likes</div>
+              <div>
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt="twitter icon"
+                  class="icon-img"
+                />
+              </div>
+            </div>
+            <div class="body-item-bottom">
+              <div class="number">507</div>
+              <div class="percentage text-green">
+                <img src="./images/icon-up.svg" alt="icon triangle up" />
+                553%
+              </div>
+            </div>
+          </div>
+
+          <div class="body-item">
+            <div class="body-item-top">
+              <div class="text-gray">Likes</div>
+              <div>
+                <img
+                  src="./images/icon-youtube.svg"
+                  alt="youtube icon"
+                  class="icon-img"
+                />
+              </div>
+            </div>
+            <div class="body-item-bottom">
+              <div class="number">107</div>
+              <div class="percentage text-red">
+                <img src="./images/icon-down.svg" alt="icon triangle down" />
+                19%
+              </div>
+            </div>
+          </div>
+
+          <div class="body-item">
+            <div class="body-item-top">
+              <div class="text-gray">Total Views</div>
+              <div>
+                <img
+                  src="./images/icon-youtube.svg"
+                  alt="youtube icon"
+                  class="icon-img"
+                />
+              </div>
+            </div>
+            <div class="body-item-bottom">
+              <div class="number">1407</div>
+              <div class="percentage text-red">
+                <img src="./images/icon-down.svg" alt="icon triangle down" />
+                12%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://instagram.com/yusufbagus_s">Ryuzen Namikaze</a>.
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

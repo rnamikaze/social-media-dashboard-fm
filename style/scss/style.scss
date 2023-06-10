@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+// Primary Color
+
+$Lime-Green: hsl(163, 72%, 41%);
+$Bright-Red: hsl(356, 69%, 56%);
+
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$YouTube: hsl(348, 97%, 39%);
+
+//Dark Theme
+
+$Toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+$Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+
+// Light Theme
+
+$Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+$Toggle: hsl(230, 22%, 74%);
+$Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+
+* {
+  z-index: 1;
+  padding: 0px;
+  margin: 0px;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+/* ----- *\
+> Toggle Switch
+\* ----- */
+.toggle-switch {
+  position: relative;
+  display: flex;
+  width: 140px;
+  height: 26px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.toggle-switch > .toggle-text {
+  position: absolute;
+  left: 0px;
+}
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 54px;
+  height: 26px;
+  background-color: #4caf50;
+  background-image: $Toggle-dark;
+  border-radius: 17px;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+
+.toggle-label:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background-color: $Very-Dark-Blue-BG;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: $Toggle;
+  background-image: none;
+}
+
+.toggle-input:checked + .toggle-label:before {
+  transform: translateX(28px);
+  background-color: $Light-Grayish-Blue-Card-BG;
+}
+
+body {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  transition: 300ms;
+
+  * {
+    color: $Very-Dark-Blue-BG;
+  }
+}
+
+.text-green {
+  color: $Lime-Green !important;
+}
+
+.text-red {
+  color: $Bright-Red !important;
+}
+
+#top-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 30vh;
+
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  transition: 300ms;
+}
+
+img.icon-img {
+  width: 20px;
+}
+
+/* ----- *\
+> Main
+\* ----- */
+main {
+  width: 85vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main > * {
+  flex-grow: 1;
+  max-height: 50vh;
+  width: 100%;
+}
+
+/* ----- *\
+> .top-section
+\* ----- */
+.top-section {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    flex-grow: 1;
+  }
+
+  > .top-section-head {
+    max-height: 100px;
+    display: flex;
+
+    > * {
+      flex-grow: 1;
+      max-width: 50%;
+      display: flex;
+      align-items: center;
+    }
+
+    .head-left {
+      line-height: 1.9rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      font-weight: 700;
+
+      > h1 {
+        font-size: 1.7rem;
+      }
+
+      > span {
+        display: block;
+        font-size: 1rem;
+      }
+    }
+
+    .head-right {
+      justify-content: flex-end;
+      font-weight: 700;
+
+      > * {
+        color: $Dark-Grayish-Blue-Text;
+      }
+    }
+  }
+
+  > .top-section-body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 80%;
+    gap: 35px;
+
+    > * {
+      border-radius: 5px;
+    }
+
+    > .body-item {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      * {
+        font-weight: 700;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .username {
+        font-size: 0.9rem;
+      }
+      .follow-number {
+        font-size: 3.8rem;
+        max-height: 3.8rem;
+      }
+      .follow {
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        max-height: 1.8rem;
+      }
+      .visit-count {
+        font-size: 0.9rem;
+        max-height: 30%;
+
+        img {
+          margin-right: 3px;
+        }
+      }
+      .icon-img {
+        margin-right: 7px;
+      }
+    }
+
+    .body-item::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 5px;
+    }
+    .facebook::before {
+      background-color: $Facebook;
+    }
+    .twitter::before {
+      background-color: $Twitter;
+    }
+    .instagram::before {
+      background-image: $Instagram;
+    }
+    .youtube::before {
+      background-color: $YouTube;
+    }
+  }
+}
+
+/* ----- *\
+> .bottom-section
+\* ----- */
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  max-height: 48vh;
+
+  > * {
+    flex-grow: 1;
+  }
+
+  > .bottom-section-head {
+    max-height: 50px;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  > .bottom-section-body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+
+    > .body-item {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px;
+      border-radius: 5px;
+
+      > * {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      > .body-item-top {
+        max-height: 45%;
+        font-weight: 700;
+
+        * {
+          font-size: 1rem;
+        }
+      }
+
+      > .body-item-bottom {
+        align-items: flex-end;
+
+        * {
+          font-weight: 700;
+        }
+
+        .number {
+          font-size: 2.2rem;
+        }
+
+        .percentage {
+          font-size: 0.9rem;
+          position: relative;
+
+          img {
+            position: absolute;
+            bottom: 5px;
+            left: -11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ----- *\
+> Color Control Light Mode
+\* ----- */
+$White-BG: hsl(0, 0%, 100%);
+$Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+$Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+//$Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+$Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+body {
+  background-color: $White-BG;
+
+  #top-bg {
+    z-index: 0;
+    background-color: $Very-Pale-Blue-Top-BG-Pattern;
+  }
+
+  .text-gray {
+    color: $Dark-Grayish-Blue-Text;
+  }
+
+  .body-item {
+    background-color: $Light-Grayish-Blue-Card-BG;
+    transition: 300ms;
+  }
+  .body-item:hover {
+    background-color: #e1e3f0;
+  }
+
+  .head-right {
+    .toggle-text {
+      color: $Dark-Grayish-Blue-Text;
+    }
+    .toggle-input:checked:hover + .toggle-label {
+      background-image: $Toggle-dark;
+    }
+  }
+}
+
+/* ----- *\
+> Color Control Dark Mode
+\* ----- */
+//$Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+$Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+$Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+$Desaturated-Blue-Text: hsl(228, 34%, 66%);
+$White-Text: hsl(0, 0%, 100%);
+body.is-dark {
+  background-color: $Very-Dark-Blue-BG;
+
+  * {
+    color: $White-BG;
+  }
+
+  #top-bg {
+    background-color: $Very-Dark-Blue-Top-BG-Pattern;
+  }
+
+  .text-gray {
+    color: $Desaturated-Blue-Text;
+  }
+
+  .body-item {
+    background-color: $Dark-Desaturated-Blue-Card-BG;
+  }
+  .body-item:hover {
+    background-color: #333a56;
+  }
+
+  .head-right {
+    .toggle-text {
+      color: $Desaturated-Blue-Text;
+      transition: 200ms;
+    }
+    .toggle-input:hover ~ .toggle-text {
+      color: $White-BG;
+    }
+  }
+}
+
+/* ----- *\
+> Footer
+\* ----- */
+.attribution {
+  position: fixed;
+  bottom: 0px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: $Lime-Green;
+  text-shadow: 0px 0px 10px #b2ff857e;
+}
+
+/* ----- *\
+> Responsive
+\* ----- */
+@media screen and (min-height: 750px) {
+  main {
+    width: 81vw;
+  }
+  .top-section {
+    > .top-section-head {
+      max-height: 130px;
+    }
+  }
+  .bottom-section {
+    max-height: 42vh;
+  }
+}
+
+@media screen and (min-width: 240px) and (max-width: 900px) {
+  main {
+    width: 85vw;
+  }
+  main > * {
+    max-height: none;
+  }
+
+  .top-section {
+    > .top-section-head {
+      padding: 10px 0px;
+      max-height: 200px;
+      flex-direction: column;
+
+      > * {
+        max-width: none;
+        padding: 20px 0px;
+      }
+
+      .head-left {
+        border-bottom: 1px solid $Desaturated-Blue-Text;
+      }
+      .head-right {
+        max-height: 40%;
+      }
+
+      .toggle-switch {
+        width: 100%;
+      }
+    }
+
+    .top-section-body {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 230px;
+      gap: 25px;
+    }
+  }
+
+  .bottom-section {
+    padding: 20px 0px;
+    .bottom-section-head {
+      padding: 40px 0px;
+      display: flex;
+      align-items: center;
+      font-size: 1.7rem;
+    }
+    .bottom-section-body {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 120px;
+      gap: 15px;
+
+      padding-bottom: 40px;
+    }
+  }
+}
